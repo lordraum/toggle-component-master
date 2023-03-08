@@ -1,11 +1,13 @@
 import React from "react";
 import Head from "./Head";
+import Cards from "./Cards";
 
 const Pricing = () => {
   return (
-    <section className="pricing">
-      <Head title={"Our pricings"} />
-    </section>
+    <article className="pricing">
+      <Head title={"Our pricing"} />
+      <Cards />
+    </article>
   );
 };
 
