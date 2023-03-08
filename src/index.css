@@ -1,5 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(20, 20, 20);
   color: lightgray;
   font-family: sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  text-align: center;
+  border: 1px solid; /* delete */
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: 2.5% auto 2.5%;
+  border: 1px dotted lightcyan;
+}
+
+.cards,
+.pricing__head {
+  border: 1px dotted palevioletred; /* delete */
+  grid-column: 2 / 3;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 325px;
+  aspect-ratio: 1 / 1.37;
+  padding: 1.5em 0;
+
+  border: 1px dotted lightgreen; /* delte */
+}
+
+@media (min-width: 600px) {
 }
