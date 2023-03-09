@@ -1,32 +1,20 @@
-import React from "react";
 import Card from "./Card";
 import CardBody from "./CardBody";
 import CardBenefit from "./CardBenefit";
+import { data } from "../data";
 
 const Cards = () => {
   return (
     <section className="cards">
-      <Card title="Basic" price="199.99">
-        <CardBody>
-          <CardBenefit benefit="500 GB Storage" />
-          <CardBenefit benefit="2 Users Allowed" />
-          <CardBenefit benefit="Send up to 3 GB" />
-        </CardBody>
-      </Card>
-      <Card title="Basic" price="199.99">
-        <CardBody>
-          <CardBenefit benefit="500 GB Storage" />
-          <CardBenefit benefit="2 Users Allowed" />
-          <CardBenefit benefit="Send up to 3 GB" />
-        </CardBody>
-      </Card>
-      <Card title="Basic" price="199.99">
-        <CardBody>
-          <CardBenefit benefit="500 GB Storage" />
-          <CardBenefit benefit="2 Users Allowed" />
-          <CardBenefit benefit="Send up to 3 GB" />
-        </CardBody>
-      </Card>
+      {data.map((x) => (
+        <Card key={x.id} title={x.name} price={x.price_anually}>
+          <CardBody>
+            {x.benefits.map((y, j) => (
+              <CardBenefit key={j} benefit={y} />
+            ))}
+          </CardBody>
+        </Card>
+      ))}
     </section>
   );
 };
