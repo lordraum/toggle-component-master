@@ -129,9 +129,11 @@ h2 {
   transition: 0.35s;
 }
 
-.button:hover {
+.button:hover,
+:root:focus {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.74);
+  outline: none;
 }
 
 @media (min-width: 1000px) {

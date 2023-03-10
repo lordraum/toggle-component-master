@@ -4,7 +4,12 @@ import Button from "./Button";
 
 const Card = ({ children, title, price }) => {
   return (
-    <div className="card">
+    <div
+      className="card"
+      role="contentinfo"
+      aria-label="Suscription type"
+      tabIndex="0"
+    >
       <CardHead title={title} price={price} />
       {children}
 
