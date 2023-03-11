@@ -5,10 +5,18 @@
 :root {
   --bg-main-color: white;
   --grad--main: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --grad--second: linear-gradient(hsl(236, 62%, 85%), hsl(237, 63%, 75%));
   --fc-main: rgb(105, 104, 120);
   --fc-second: white;
   --fc-third: rgb(201 200 214);
   --fc-fourth: hsl(237, 63%, 64%);
+}
+
+.card:focus,
+.toggle__button:focus,
+.button:focus {
+  outline: none;
+  border: 2px solid hsla(263, 79%, 56%, 0.295);
 }
 
 body {
@@ -65,6 +73,10 @@ h2 {
   padding: 0 4px;
   border-radius: 1em;
   cursor: pointer;
+}
+
+.toggle__button:hover {
+  background-image: var(--grad--second);
 }
 
 .toggle__circle {
@@ -135,12 +147,12 @@ h2 {
 }
 
 .card__benefit-box {
-  border-bottom: 1px solid lightgoldenrodyellow;
+  border-bottom: 1px solid var(--fc-third);
   padding: 1.2em 0;
 }
 
 .card__benefit-box:first-child {
-  border-top: 1px solid lightgoldenrodyellow;
+  border-top: 1px solid var(--fc-third);
 }
 
 .button {
@@ -157,8 +169,7 @@ h2 {
   color: var(--fc-fourth);
 }
 
-.button:hover,
-:root:focus {
+.button:hover {
   background-color: transparent;
   border: 1px solid;
   background-image: none;
@@ -169,6 +180,23 @@ h2 {
 .card:nth-child(2) > .button:hover {
   background-color: transparent;
   color: var(--fc-second);
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 3em;
+  font-size: 11px;
+  text-align: center;
+  color: rgb(161, 165, 167);
+  opacity: 0.9;
+}
+
+.attribution a {
+  color: hsl(228, 21%, 58%);
+  text-decoration: none;
 }
 
 @media (min-width: 1000px) {
